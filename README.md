@@ -29,6 +29,9 @@ Installation
 1. Go into Kanboards `plugins/` folder
 2. `git clone https://github.com/Tagirijus/CommentModifier`
 
+**Important:**
+You might have to go to the settings and add the domain you want to use external media from, since the _Content-Security-Policy_ otherwise would block the external source.
+
 
 Translations
 ------------

@@ -23,7 +23,7 @@
         <div class="task-form-main-column">
             <?= $this->form->label('Audio filename regex', 'audio_filename_regex') ?>
             <?= $this->form->text('audio_filename_regex', ['audio_filename_regex' => $audio_filename_regex], [], [
-                'autofocus',
+                '',
                 'tabindex="2"'
             ]) ?>
         </div>
@@ -31,7 +31,7 @@
         <div class="task-form-main-column">
             <?= $this->form->label('Video URL regex', 'video_url_regex') ?>
             <?= $this->form->text('video_url_regex', ['video_url_regex' => $video_url_regex], [], [
-                'autofocus',
+                '',
                 'tabindex="3"'
             ]) ?>
         </div>
@@ -39,8 +39,28 @@
         <div class="task-form-main-column">
             <?= $this->form->label('Video filename regex', 'video_filename_regex') ?>
             <?= $this->form->text('video_filename_regex', ['video_filename_regex' => $video_filename_regex], [], [
-                'autofocus',
+                '',
                 'tabindex="4"'
+            ]) ?>
+        </div>
+
+    </div>
+
+
+    <br>
+    <br>
+
+    <p>
+        <?= t('To make media URLs from external domains available, it is needed to modify the Content-Security-Policy header. Enter values here seperated by a space.') ?>
+    </p>
+
+    <div class="task-form-container">
+
+        <div class="task-form-main-column">
+            <?= $this->form->label('media-src ', 'csp_media_src') ?>
+            <?= $this->form->text('csp_media_src', ['csp_media_src' => $csp_media_src], [], [
+                '',
+                'tabindex="5"'
             ]) ?>
         </div>
 

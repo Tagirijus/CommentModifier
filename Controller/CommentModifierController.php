@@ -31,6 +31,10 @@ class CommentModifierController extends \Kanboard\Controller\PluginController
             'video_filename_regex' => $this->configModel->get(
                 'commentmodifier_video_filename_regex',
                 '/[^\/]+$/'
+            ),
+            'csp_media_src' => $this->configModel->get(
+                'commentmodifier_csp_media_src',
+                'https://www... https://www....'
             )
         ]));
     }
@@ -46,7 +50,8 @@ class CommentModifierController extends \Kanboard\Controller\PluginController
             'commentmodifier_audio_url_regex'      => $form['audio_url_regex'],
             'commentmodifier_audio_filename_regex' => $form['audio_filename_regex'],
             'commentmodifier_video_url_regex'      => $form['video_url_regex'],
-            'commentmodifier_video_filename_regex' => $form['video_filename_regex']
+            'commentmodifier_video_filename_regex' => $form['video_filename_regex'],
+            'commentmodifier_csp_media_src' => $form['csp_media_src']
         ];
 
         $this->languageModel->loadCurrentLanguage();

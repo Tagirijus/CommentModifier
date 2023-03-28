@@ -10,6 +10,12 @@ class Plugin extends Base
 {
     public function initialize()
     {
+        // to be able to load media from another domain, I have to
+        // modify the Content-Security-Policy first
+        $this->container['cspRules'] = array_merge($this->container['cspRules'], [
+            'media-src' => $this->configModel->get('commentmodifier_csp_media_src', '')
+        ]);
+
         // Helper
         $this->helper->register('commentModifierHelper', '\Kanboard\Plugin\CommentModifier\Helper\CommentModifierHelper');
 
@@ -46,7 +52,7 @@ class Plugin extends Base
 
     public function getPluginVersion()
     {
-        return '1.0.0';
+        return '1.1.0';
     }
 
     public function getCompatibleVersion()
