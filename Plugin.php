@@ -13,6 +13,9 @@ class Plugin extends Base
         // Helper
         $this->helper->register('commentModifierHelper', '\Kanboard\Plugin\CommentModifier\Helper\CommentModifierHelper');
 
+        // Template Override
+        $this->template->setTemplateOverride('comment/show', 'CommentModifier:comment/show');
+
         // Views - Template Hook
         $this->template->hook->attach(
             'template:config:sidebar', 'CommentModifier:config/commentmodifier_config_sidebar');
