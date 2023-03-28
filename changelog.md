@@ -7,6 +7,7 @@
 
 _(most recent changes are listed on top):_
 - Added configuration for modifying the Content-Security-Policy
+- Added some fallback styling for the players so that e.g. video players cannot get too big
 
 
 ## v1.0

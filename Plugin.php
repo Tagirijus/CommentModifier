@@ -16,6 +16,9 @@ class Plugin extends Base
             'media-src' => $this->configModel->get('commentmodifier_csp_media_src', '')
         ]);
 
+        // CSS - Asset Hook
+        $this->hook->on('template:layout:css', array('template' => 'plugins/CommentModifier/Assets/css/comment-modifier.min.css'));
+
         // Helper
         $this->helper->register('commentModifierHelper', '\Kanboard\Plugin\CommentModifier\Helper\CommentModifierHelper');
 

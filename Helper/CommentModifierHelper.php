@@ -38,7 +38,7 @@ class CommentModifierHelper extends Base
     {
         return $this->replaceURLsWithPlayer(
             $content,
-            '<a href="https://www.%1$s" target="_blank">%2$s</a><br><br><video src="https://www.%1$s" controls></video>',
+            '<a href="https://www.%1$s" target="_blank">%2$s</a><br><br><video src="https://www.%1$s" class="cm-max-width" controls></video>',
             'commentmodifier_video_url_regex',
             'commentmodifier_video_filename_regex'
         );
