@@ -21,7 +21,7 @@ class CommentModifierHelper extends Base
     {
         return $this->replaceURLsWithPlayer(
             $content,
-            '<a href="https://www.%1$s" target="_blank">%2$s</a><br><br><audio src="https://www.%1$s" controls></audio>',
+            '<a href="https://www.%1$s" target="_blank">%2$s</a>&nbsp;&nbsp;<a href="https://www.%1$s" class="commentModifierCopyClass">[copy]</a><br><br><audio src="https://www.%1$s" controls></audio>',
             'commentmodifier_audio_url_regex',
             'commentmodifier_audio_filename_regex'
         );
@@ -38,7 +38,7 @@ class CommentModifierHelper extends Base
     {
         return $this->replaceURLsWithPlayer(
             $content,
-            '<a href="https://www.%1$s" target="_blank">%2$s</a><br><br><video src="https://www.%1$s" class="cm-max-width" controls></video>',
+            '<a href="https://www.%1$s" target="_blank">%2$s</a>&nbsp;&nbsp;<a href="https://www.%1$s" class="commentModifierCopyClass">[copy]</a><br><br><video src="https://www.%1$s" class="cm-max-width" controls></video>',
             'commentmodifier_video_url_regex',
             'commentmodifier_video_filename_regex'
         );

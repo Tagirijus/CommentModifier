@@ -19,6 +19,9 @@ class Plugin extends Base
         // CSS - Asset Hook
         $this->hook->on('template:layout:css', array('template' => 'plugins/CommentModifier/Assets/css/comment-modifier.min.css'));
 
+        // JS - Asset Hook
+        $this->hook->on('template:layout:js', array('template' => 'plugins/CommentModifier/Assets/js/commentmodifier.min.js'));
+
         // Helper
         $this->helper->register('commentModifierHelper', '\Kanboard\Plugin\CommentModifier\Helper\CommentModifierHelper');
 
