@@ -1,6 +1,14 @@
 # Changelog
 
 
+## v1.2
+
+### What's Changed
+
+_(most recent changes are listed on top):_
+- Added copy-button next to modified url
+
+
 ## v1.1
 
 ### What's Changed
